@@ -1,18 +1,27 @@
-// You have generated a new plugin project without specifying the `--platforms`
-// flag. A plugin project with no platform support was generated. To add a
-// platform, run `flutter create -t plugin --platforms <platforms> .` under the
-// same directory. You can also find a detailed instruction on how to add
-// platforms in the `pubspec.yaml` at
-// https://flutter.dev/to/pubspec-plugin-platforms.
+import 'dart:io';
 
-import 'pdf_password_manager_platform_interface.dart';
+import 'package:dart_pdf_reader/dart_pdf_reader_io.dart';
+// import 'pdf_password_manager_platform_interface.dart';
 
 class PdfPasswordManager {
-  Future<bool?> isPasswordProtected(String inputPath) async {
-    return null;
-    // return await PdfPasswordManagerPlatform.instance.isPasswordProtected(
-    //   inputPath,
-    // );
+  Future<bool?> isPasswordProtected(String filePath) async {
+    try {
+      final file = File(filePath);
+      final stream = FileStream(file.openSync());
+      final parser = PDFParser(stream);
+      final document = await parser.parse();
+      final mainTrailer = document.mainTrailer;
+
+      final list = mainTrailer.entries.entries
+          .toList()
+          .map(
+            (e) => e.key.value,
+          )
+          .toSet();
+      return list.contains("Encrypt");
+    } catch (e) {
+      return true;
+    }
   }
 
   Future<String?> setPassword({
