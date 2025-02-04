@@ -9,32 +9,35 @@ import 'pdf_password_manager_platform_interface.dart';
 
 class PdfPasswordManager {
   Future<bool?> isPasswordProtected(String inputPath) async {
-    return await PdfPasswordManagerPlatform.instance.isPasswordProtected(
-      inputPath,
-    );
+    return null;
+    // return await PdfPasswordManagerPlatform.instance.isPasswordProtected(
+    //   inputPath,
+    // );
   }
 
-  Future<void> setPassword({
+  Future<String?> setPassword({
     required String inputPath,
     required String outputPath,
     required String password,
   }) async {
-    return await PdfPasswordManagerPlatform.instance.setPassword(
-      inputPath,
-      outputPath,
-      password,
-    );
+    return null;
+    // return await PdfPasswordManagerPlatform.instance.setPassword(
+    //   inputPath,
+    //   outputPath,
+    //   password,
+    // );
   }
 
-  Future<void> removePassword({
+  Future<String?> removePassword({
     required String inputPath,
     required String outputPath,
     required String password,
   }) async {
-    return await PdfPasswordManagerPlatform.instance.removePassword(
-      inputPath,
-      outputPath,
-      password,
-    );
+    return null;
+    // return await PdfPasswordManagerPlatform.instance.removePassword(
+    //   inputPath,
+    //   outputPath,
+    //   password,
+    // );
   }
 }

@@ -10,12 +10,12 @@ class MethodChannelPdfPasswordManager extends PdfPasswordManagerPlatform {
   final methodChannel = const MethodChannel('pdf_password_manager');
 
   @override
-  Future<void> setPassword(
+  Future<String?> setPassword(
     String inputPath,
     String outputPath,
     String password,
   ) async {
-    await methodChannel.invokeMethod<void>('addPassword', {
+    return await methodChannel.invokeMethod<String?>('addPassword', {
       'inputPath': inputPath,
       'outputPath': outputPath,
       'password': password,
@@ -23,12 +23,12 @@ class MethodChannelPdfPasswordManager extends PdfPasswordManagerPlatform {
   }
 
   @override
-  Future<void> removePassword(
+  Future<String?> removePassword(
     String inputPath,
     String outputPath,
     String password,
   ) async {
-    await methodChannel.invokeMethod<void>('removePassword', {
+    return await methodChannel.invokeMethod<String?>('removePassword', {
       'inputPath': inputPath,
       'outputPath': outputPath,
       'password': password,

@@ -26,13 +26,13 @@ abstract class PdfPasswordManagerPlatform extends PlatformInterface {
 
   Future<bool?> isPasswordProtected(String inputPath);
 
-  Future<void> setPassword(
+  Future<String?> setPassword(
     String inputPath,
     String outputPath,
     String password,
   );
 
-  Future<void> removePassword(
+  Future<String?> removePassword(
     String inputPath,
     String outputPath,
     String password,

@@ -17,12 +17,11 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
-
-flutter:
-  plugin:
-    platforms:
-      android:
-        package: com.example.pdf_password_manager
-        pluginClass: PdfPasswordManagerPlugin
-      # some_platform:
-      #   pluginClass: somePluginClass
+# flutter:
+#   plugin:
+#     platforms:
+#       android:
+#         package: com.example.pdf_password_manager
+#         pluginClass: PdfPasswordManagerPlugin
+# some_platform:
+#   pluginClass: somePluginClass
