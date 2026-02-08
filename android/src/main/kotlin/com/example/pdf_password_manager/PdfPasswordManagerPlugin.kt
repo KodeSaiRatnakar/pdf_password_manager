@@ -5,6 +5,7 @@ import com.tom_roush.pdfbox.pdmodel.PDDocument
 import com.tom_roush.pdfbox.pdmodel.encryption.AccessPermission
 import com.tom_roush.pdfbox.pdmodel.encryption.StandardProtectionPolicy
 import java.io.File
+import android.util.Log
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
@@ -87,6 +88,7 @@ override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: MethodChan
     }
 
     private fun isPasswordProtected(inputPath: String): Boolean {
+            Log.d("PDF_PASSWORD_MANAGER", "Checking if PDF is password protected: $inputPath")
         return try {
             PDDocument.load(File(inputPath)).use { it.close() }
             false // No password

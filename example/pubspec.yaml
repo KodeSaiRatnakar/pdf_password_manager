@@ -17,7 +17,7 @@ dependencies:
     path: ../../pdf_password_manager
   path_provider: ^2.1.5
   file_picker: ^8.1.7
-  permission_handler: ^11.3.1
+  permission_handler: ^12.0.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

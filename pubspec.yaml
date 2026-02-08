@@ -8,7 +8,10 @@ environment:
   flutter: ">=3.3.0"
 
 dependencies:
-  dart_pdf_reader: ^2.1.0
+  dart_pdf_reader:
+    git:
+      url: https://github.com/NicolaVerbeeck/dart_pdf_reader.git
+      ref: f12f68fc07eca8e5095c88d1c5a1b1055d5ab4d5
   flutter:
     sdk: flutter
   path: ^1.9.0
@@ -18,7 +21,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 # flutter:
 #   plugin:
 #     platforms:

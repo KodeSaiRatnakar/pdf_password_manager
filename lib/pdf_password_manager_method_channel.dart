@@ -6,7 +6,7 @@ import 'pdf_password_manager_platform_interface.dart';
 /// An implementation of [PdfPasswordManagerPlatform] that uses method channels.
 class MethodChannelPdfPasswordManager extends PdfPasswordManagerPlatform {
   /// The method channel used to interact with the native platform.
-  @visibleForTesting
+  // @visibleForTesting
   final methodChannel = const MethodChannel('pdf_password_manager');
 
   @override
