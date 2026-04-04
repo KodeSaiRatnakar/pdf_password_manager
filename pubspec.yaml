@@ -14,8 +14,8 @@ dependencies:
       ref: f12f68fc07eca8e5095c88d1c5a1b1055d5ab4d5
   flutter:
     sdk: flutter
-  path: ^1.9.0
-  plugin_platform_interface: ^2.0.2
+  path: ^1.9.1
+  plugin_platform_interface: ^2.1.8
   # pdf: ^3.11.2
 
 dev_dependencies:
