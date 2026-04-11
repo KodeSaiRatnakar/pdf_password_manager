@@ -1,6 +1,7 @@
 name: pdf_password_manager
 description: "A new Flutter plugin project."
 version: 0.0.1
+resolution: workspace
 homepage:
 
 environment:
